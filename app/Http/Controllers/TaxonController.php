@@ -26,6 +26,6 @@ class TaxonController extends Controller
 	{
 		$taxons = Taxons::find($id);
 		$taxonomy = $taxons->taxonomy;
-		return $taxonomy;
+		return $taxons;
 	}
 }

@@ -17,11 +17,8 @@ return new class extends Migration
             $table->string('name');
             $table->integer('suptaxon_id')->nullable();
             $table->integer('taxonomic_unit_id');
+			$table->nestedSet();
         });
-		
-		Schema::table('taxons', function($table) {
-			$table->foreign('taxonomic_unit_id')->references('id')->on('taxonomy')->onDelete('cascade');
-		});
     }
 
     /**
@@ -29,6 +26,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('taxons');
+		Schema::dropIfExists('taxons');
+		Schema::table('taxons', function (Blueprint $table) {
+			$table->dropNestedSet();
+		});
     }
 };

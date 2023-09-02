@@ -18,14 +18,17 @@ class TaxonController extends Controller
 		$taxon->suptaxon_id = $request->suptaxon_id;
 		$taxon->taxonomic_unit_id = $request->taxonomic_unit_id;
 		
-		//$taxon->save();
-		$taxonomy->taxons()->save($taxon);
+		//$taxon->saveAsRoot();
+		$parentTaxon = Taxons::find($request->parent_id);
+		$taxon->appendToNode($parentTaxon)->save();
 	}
 	
 	public function getTaxon(Request $request, $id)
 	{
 		$taxons = Taxons::find($id);
-		$taxonomy = $taxons->taxonomy;
-		return $taxons;
+		//$taxonomy = $taxons->taxonomy;
+		//return $taxons;
+		$results = $taxons->descendantsAndSelf($id);
+		return $results;
 	}
 }

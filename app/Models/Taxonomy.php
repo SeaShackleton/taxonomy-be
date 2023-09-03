@@ -10,8 +10,4 @@ class Taxonomy extends Model
 	public $timestamps = false;
 	protected $table = 'taxonomy';
 	
-	public function taxons(): HasMany
-	{
-		return $this->hasMany(Taxons::class, 'taxonomic_unit_id', 'id');
-	}
 }

@@ -20,7 +20,8 @@ class Taxons extends Model
 	 */
 	public static function getTaxonsById($id) 
 	{
-		return Taxons::descendantsAndSelf($id)->toTree();			
+		$tree = Taxons::descendantsAndSelf($id)->toTree();		
+		return $tree[0];
 	}
 	
 	/**
@@ -34,20 +35,22 @@ class Taxons extends Model
 	 *			$request->parent_id
 	 *
 	 */
-	public static function AddTaxonToParentById($request) 
+	public static function AddTaxonToParentById($authority, $name, $suptaxonId, $taxonomicUnitId, $parentId) 
 	{
 		//create new taxon
 		$taxon = new Taxons();
-		$taxon->authority = $request->authority;
-		$taxon->name = $request->name;
-		$taxon->suptaxon_id = $request->suptaxon_id;
-		$taxon->taxonomic_unit_id = $request->taxonomic_unit_id;
+		$taxon->authority = $authority;
+		$taxon->name = $name;
+		$taxon->suptaxon_id = $suptaxonId;
+		$taxon->taxonomic_unit_id = $taxonomicUnitId;
 		
 		//$taxon->saveAsRoot();
 		//find parent
-		$parentTaxon = Taxons::find($request->parent_id);
+		$parentTaxon = Taxons::find($parentId);
 		
 		//associate taxon to parent and save
-		$taxon->appendToNode($parentTaxon)->save();	
+		$taxon->appendToNode($parentTaxon)->save();			
+		
+		
 	}
 }

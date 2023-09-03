@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('suptaxon_id')->nullable();
             $table->integer('taxonomic_unit_id')->unsigned()->index()->nullable();
 			$table->foreign('taxonomic_unit_id')->references('id')->on('taxonomy')->onDelete('cascade');
+            $table->integer('value')->nullable();
 			$table->nestedSet();
         });
     }

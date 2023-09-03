@@ -21,6 +21,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 1,
 			'_lft' => 1,
 			'_rgt' => 22,
+			'value' =>  null,
 			'parent_id' => null
         ]);
 		
@@ -32,6 +33,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 2,
 			'_lft' => 2,
 			'_rgt' => 17,
+			'value' =>  null,
 			'parent_id' => 1
         ]);
 
@@ -43,6 +45,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 2,
 			'_lft' => 18,
 			'_rgt' => 19,
+			'value' =>  null,
 			'parent_id' => 1
         ]);
 
@@ -54,6 +57,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 2,
 			'_lft' => 20,
 			'_rgt' => 21,
+			'value' =>  null,
 			'parent_id' => 1
         ]);
 
@@ -65,6 +69,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 3,
 			'_lft' => 3,
 			'_rgt' => 16,
+			'value' =>  51532,
 			'parent_id' => 2
         ]);
 
@@ -76,6 +81,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 4,
 			'_lft' => 4,
 			'_rgt' => 15,
+			'value' =>  42653,
 			'parent_id' => 5
         ]);
 
@@ -87,6 +93,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 5,
 			'_lft' => 5,
 			'_rgt' => 14,
+			'value' =>  32556,
 			'parent_id' => 6
         ]);
 
@@ -98,6 +105,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 6,
 			'_lft' => 6,
 			'_rgt' => 13,
+			'value' =>  12365,
 			'parent_id' => 7
         ]);
 
@@ -109,6 +117,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 7,
 			'_lft' => 7,
 			'_rgt' => 12,
+			'value' =>  2236,
 			'parent_id' => 8,
         ]);	
 
@@ -120,6 +129,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 8,
 			'_lft' => 8,
 			'_rgt' => 11,
+			'value' =>  423,
 			'parent_id' => 9
         ]);
 
@@ -131,6 +141,7 @@ class TaxonSeeder extends Seeder
 			'taxonomic_unit_id' => 9,
 			'_lft' => 9,
 			'_rgt' => 10,
+			'value' =>  1,
 			'parent_id' => 10
         ]);		
     }

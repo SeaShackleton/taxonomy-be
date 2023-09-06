@@ -15,7 +15,6 @@ class TaxonomyController extends Controller
 	}
 	
 	public function addTaxonomy(Request $request){
-		//$request->
 		Taxonomy::addTaxonomy($request->name, $request->parent_id);
 	}
 }

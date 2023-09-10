@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Taxonomy;
 use App\Models\Taxons;
+use App\Services\TaxonServiceInterface;
 
 class TaxonController extends Controller
 {
@@ -18,4 +19,11 @@ class TaxonController extends Controller
 		$tree = Taxons::getTaxonsById($id);
 		return $tree;
 	}
+	
+	public function getTaxonImages(Request $request, TaxonServiceInterface $TaxonService, $id)
+	{
+		return $TaxonService->getImagesofTaxonById($id);
+		//return "test";
+	}
+	
 }

@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 		$this->call([
 			TaxonomySeeder::class,
-			TaxonSeeder::class
+			TaxonSeeder::class,
+			ImageSeeder::class
 		]);
     }
 }

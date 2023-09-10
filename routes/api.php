@@ -25,3 +25,4 @@ Route::get('/taxonomy/{id}', [TaxonomyController::class, 'getTaxonomy']);
 Route::post('/taxonomy/add', [TaxonomyController::class, 'addTaxonomy']);
 Route::get('/taxons/{id}', [TaxonController::class, 'getTaxon']);
 Route::post('/taxons/add', [TaxonController::class, 'addTaxon']);
+Route::get('/taxons/{id}/images', [TaxonController::class, 'getTaxonImages']);

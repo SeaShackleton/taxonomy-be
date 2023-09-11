@@ -14,11 +14,31 @@ class ImageSeeder extends Seeder
     public function run(): void
     {
 		DB::table('images')->insert([
-            'file_name' => 'file-1',
+            'file_name' => 'file-1.jpg',
 			'taxon_id' => 1
         ]);
 		DB::table('images')->insert([
-            'file_name' => 'file-2',
+            'file_name' => 'file-2.jpg',
+			'taxon_id' => 1
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-3.jpg',
+			'taxon_id' => 1
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-4.jpg',
+			'taxon_id' => 1
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-5.jpg',
+			'taxon_id' => 1
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-6.jpg',
+			'taxon_id' => 1
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-7.jpg',
 			'taxon_id' => 1
         ]);
     }

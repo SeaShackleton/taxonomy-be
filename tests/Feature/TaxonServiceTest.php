@@ -10,7 +10,7 @@ use App\Services\TaxonService;
 class TaxonServiceTest extends TestCase
 {
     /**
-     * A basic feature test example.
+     * A test for getImagesofTaxonById within TaxonService.
      */
     public function test_get_images_of_taxon_by_id_(): void
     {

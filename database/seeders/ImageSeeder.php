@@ -41,5 +41,29 @@ class ImageSeeder extends Seeder
             'file_name' => 'file-7.jpg',
 			'taxon_id' => 1
         ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-8.jpg',
+			'taxon_id' => 2
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-9.jpg',
+			'taxon_id' => 2
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-10.jpg',
+			'taxon_id' => 2
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-11.jpg',
+			'taxon_id' => 2
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-12.jpg',
+			'taxon_id' => 2
+        ]);
+		DB::table('images')->insert([
+            'file_name' => 'file-13.jpg',
+			'taxon_id' => 2
+        ]);
     }
 }
